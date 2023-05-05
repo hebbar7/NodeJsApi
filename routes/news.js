@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router()
-import { getArticlesController } from '../controller/articlesController.js'
+import { getArticlesController } from "../news/controller/articlesController.js"
 /**
  *@openapi
  * paths: 
@@ -14,6 +14,11 @@ import { getArticlesController } from '../controller/articlesController.js'
  *            name: q
  *            description: searchstring
  *            required: false
+ *            schema:
+ *             type: string
+ *          - in: query
+ *            name: in
+ *            description: searches keyword in title,description 
  *            schema:
  *             type: string
  *          - in: query

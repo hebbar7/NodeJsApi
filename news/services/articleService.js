@@ -1,10 +1,13 @@
 import fetch from'node-fetch';
+import { apiKey } from '../../config.js';
 
 
-export async function getArticles(keyword) {
+export async function getArticles(params) {
     try {
-        const apiKey = process.env.APIKEY
-        response = await fetch(`https://gnews.io/api/v4/search?q=${keyword}&apikey=${apiKey}`)
+        const url = "https://gnews.io/api/v4/search"
+        const query = `q=${params.q}&apikey=${apiKey}&country=${params.country}&lang=${params.lang}&max=${params.max}&in=${params.in}`
+        const response = await fetch(`${url}?${query}`)
+        
         return response
     }
     catch (e){

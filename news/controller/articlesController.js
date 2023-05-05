@@ -2,10 +2,10 @@ import { getArticles } from '../services/articleService.js'
 
 export async function getArticlesController(req,res) {
     try {
-        const keyword = req.query.q
-        const response = await getArticles(keyword)
+        const params = req.query
+        const response = await getArticles(params)
         const data = await response.json()
-        return res.send({ "status": response.status, "response": data});
+        return res.send({ status: response.status, response : data});
     }
     catch (e) {
         return res.send({
