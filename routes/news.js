@@ -12,7 +12,7 @@ import { getArticlesController } from "../news/controller/articlesController.js"
  *       parameters:
  *          - in: query
  *            name: q
- *            description: searchstring keyword
+ *            description: searchstring keyword, words with special chars must be enclosed in quotes
  *            required: false
  *            schema:
  *             type: string
