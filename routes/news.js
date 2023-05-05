@@ -42,6 +42,16 @@ import { getArticlesController } from "../news/controller/articlesController.js"
  *                                           }
  *                                        }
  *                                     ]
+ *             400:
+ *                description: Bad Request
+ *             403:
+ *                description: Forbidden
+ *             429:
+ *                description: Too many requests
+ *             500:
+ *                description: Internal Server Error
+ *             503:
+ *                description: Service Unavailable
  * 
  *       parameters:
  *          - in: query
