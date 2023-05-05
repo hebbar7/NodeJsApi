@@ -6,7 +6,7 @@ const options = {
     openapi: '3.0.0',
     info: {
       title: 'News API',
-      description: 'Fing articles ',
+      description: 'Find articles ',
       version: '1.0.0',
     },
   },
