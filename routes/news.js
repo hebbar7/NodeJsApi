@@ -56,7 +56,7 @@ import { getArticlesController } from "../news/controller/articlesController.js"
  *       parameters:
  *          - in: query
  *            name: q
- *            description: searchstring keyword, words with special chars must be enclosed in quotes
+ *            description: searchstring keyword, words with special chars must be enclosed in double quotes
  *            required: false
  *            schema:
  *             type: string
