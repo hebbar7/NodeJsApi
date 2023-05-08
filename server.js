@@ -8,7 +8,7 @@ import { port } from './config.js';
 let cache = apicache.middleware
 
 app.use(router)
-app.use(cache())
+app.use(cache('10 minutes'))
 app.listen(port, () => {
   console.log(`API server listening on port ${port}`);
   swaggerDocs(app, port)
